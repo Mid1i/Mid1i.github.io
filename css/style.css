@@ -76,7 +76,6 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
   padding: 10px 0px;
   justify-content: center;
-  background-color: rgb(252, 180, 45);
 }
 
 .header-title {
