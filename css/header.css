@@ -1,0 +1,30 @@
+.header {
+  display: flex;
+  padding: 10px 0px;
+  justify-content: center;
+  background-color: rgb(252, 180, 45);
+}
+
+.header-title {
+  font-size: 70px;
+  font-weight: 700;
+  margin: 0px 10px 0px 0px;
+}
+@media (max-width: 767px) {
+  .header-title {
+    margin: 0px 5px 0px 0px;
+    font-size: 50px;
+  }
+}
+
+.header-image {
+  flex: 0 0 70px;
+}
+.header-image img {
+  max-width: 100%;
+}
+@media (max-width: 767px) {
+  .header-image {
+    flex: 0 0 50px;
+  }
+}
