@@ -1,0 +1,174 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+nav, footer, header, aside {
+  display: block;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+
+.header {
+  display: flex;
+  padding: 10px 0px;
+  justify-content: center;
+  background-color: rgb(252, 180, 45);
+}
+
+.header-title {
+  font-size: 70px;
+  font-weight: 700;
+  margin: 0px 10px 0px 0px;
+}
+@media (max-width: 767px) {
+  .header-title {
+    margin: 0px 5px 0px 0px;
+    font-size: 50px;
+  }
+}
+
+.header-image {
+  flex: 0 0 70px;
+}
+.header-image img {
+  max-width: 100%;
+}
+@media (max-width: 767px) {
+  .header-image {
+    flex: 0 0 50px;
+  }
+}
+
+.wrapper {
+  background-color: white;
+  font-family: "Oswald";
+  color: black;
+  width: 100%;
+}
+
+.content-menu {
+  display: flex;
+  flex-direction: column;
+}
+
+.content-row {
+  display: flex;
+  flex-direction: center;
+  justify-content: space-around;
+}
+
+.menu-item {
+  display: flex;
+  flex: 0 0 200px;
+  margin: 50px auto;
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
+  text-transform: uppercase;
+}
+@media (max-width: 767px) {
+  .menu-item {
+    flex: 0 0 100px;
+    margin: 5% auto;
+  }
+}
+
+.menu-image {
+  width: 60px;
+  height: 60px;
+  flex: 0 0 40px;
+}
+.menu-image img {
+  max-width: 100%;
+  transition: all 0.3s ease 0s;
+}
+
+.active {
+  transform: rotate(360deg);
+}
+
+.menu-title {
+  font-size: 35px;
+  margin: 10px 0px;
+}
+@media (max-width: 767px) {
+  .menu-title {
+    font-size: 15px;
+  }
+}
+
+.menu-button {
+  width: 50%;
+  font-size: 30px;
+  border-radius: 10px;
+  background-color: rgb(252, 180, 45);
+}
+@media (max-width: 767px) {
+  .menu-button {
+    font-size: 20px;
+  }
+}
