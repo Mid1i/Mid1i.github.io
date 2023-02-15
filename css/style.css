@@ -102,6 +102,28 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+.minus-button, .plus-button {
+  position: absolute;
+  opacity: 0;
+  top: 76%;
+  line-height: 40px;
+  text-align: center;
+  font-size: 30px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  -webkit-transition: all 1s ease 0s;
+  transition: all 1s ease 0s;
+}
+@media (max-width: 767px) {
+  .minus-button, .plus-button {
+    width: 30px;
+    height: 30px;
+    font-size: 25px;
+    line-height: 30px;
+  }
+}
+
 .wrapper {
   background-color: white;
   font-family: "Oswald";
@@ -122,6 +144,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .menu-item {
   display: flex;
+  position: relative;
   flex: 0 0 200px;
   margin: 50px auto;
   text-align: center;
@@ -143,6 +166,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 .menu-image img {
   max-width: 100%;
+  -webkit-transition: all 0.6s ease 0s;
   transition: all 0.6s ease 0s;
 }
 
@@ -162,12 +186,52 @@ h1, h2, h3, h4, h5, h6 {
 
 .menu-button {
   width: 50%;
+  z-index: 1;
   font-size: 30px;
   border-radius: 10px;
+  -webkit-transition: all 1s ease 0s;
+  transition: all 1s ease 0s;
   background-color: rgb(252, 180, 45);
 }
 @media (max-width: 767px) {
   .menu-button {
     font-size: 20px;
+  }
+}
+
+.plus-button {
+  background-color: rgb(252, 180, 45);
+}
+
+.minus-button {
+  background-color: rgb(226, 34, 34);
+}
+
+.hide {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.animateToRight {
+  opacity: 5;
+  -webkit-transform: translate(30px);
+  transform: translate(30px);
+}
+@media (max-width: 767px) {
+  .animateToRight {
+    -webkit-transform: translate(20px);
+    transform: translate(20px);
+  }
+}
+
+.animateToLeft {
+  opacity: 5;
+  -webkit-transform: translate(-30px);
+  transform: translate(-30px);
+}
+@media (max-width: 767px) {
+  .animateToLeft {
+    -webkit-transform: translate(-20px);
+    transform: translate(-20px);
   }
 }
