@@ -8,6 +8,14 @@
         <link rel="stylesheet" href="css/style.css">
         <!--Кодировка страницы-->
         <meta charset="UTF-8">
+
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+        <script src="https://telegram.org/js/telegram-web-app.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+        
+        <script src="js/counter.js"></script>
+        <script src="js/buttons.js"></script>
+        <script src="js/script.js"></script>
     </head>
 
     <body>
@@ -25,6 +33,7 @@
                             <img src="img/burger.png" alt="burger" class="burger">    
                         </div>
                         <div class="menu-title">Burger•15$</div>
+                        <div class="counter-button counter-burger hide" id="counter-burger">0</div>
                         <button class="menu-button button-burger" data-id="burger">Add</button>
                         <button class="plus-button plus-burger" data-id="burger">+</button>
                         <button class="minus-button minus-burger" data-id="burger">-</button> 
@@ -34,6 +43,7 @@
                             <img src="img/pizza.png" alt="pizza" class="pizza">    
                         </div>
                         <div class="menu-title">Pizza•20$</div>
+                        <div class="counter-button counter-pizza hide" id="counter-pizza">0</div>
                         <button class="menu-button button-pizza" data-id="pizza">Add</button>
                         <button class="plus-button plus-pizza" data-id="pizza">+</button>
                         <button class="minus-button minus-pizza" data-id="pizza">-</button>
@@ -43,6 +53,7 @@
                             <img src="img/hot-dog.png" alt="hot-dog" class="hotdog">    
                         </div>
                         <div class="menu-title">Hot-Dog•10$</div>
+                        <div class="counter-button counter-hotdog hide" id="counter-hotdog">0</div>
                         <button class="menu-button button-hotdog" data-id="hotdog">Add</button>
                         <button class="plus-button plus-hotdog" data-id="hotdog">+</button>
                         <button class="minus-button minus-hotdog" data-id="hotdog">-</button>
@@ -54,6 +65,7 @@
                             <img src="img/cookies.png" alt="cookies" class="cookies">    
                         </div>
                         <div class="menu-title">Cookies•5$</div>
+                        <div class="counter-button counter-cookies hide" id="counter-cookies">0</div>
                         <button class="menu-button button-cookies" data-id="cookies">Add</button>
                         <button class="plus-button plus-cookies" data-id="cookies">+</button>
                         <button class="minus-button minus-cookies" data-id="cookies">-</button>
@@ -63,6 +75,7 @@
                             <img src="img/coke.png" alt="coke" class="coke">    
                         </div>
                         <div class="menu-title">Coke•7$</div>
+                        <div class="counter-button counter-coke hide" id="counter-coke">0</div>
                         <button class="menu-button button-coke" data-id="coke">Add</button>
                         <button class="plus-button plus-coke" data-id="coke">+</button>
                         <button class="minus-button minus-coke" data-id="coke">-</button>
@@ -72,6 +85,7 @@
                             <img src="img/potato.png" alt="fries" class="fries">    
                         </div>
                         <div class="menu-title">Fries•8$</div>
+                        <div class="counter-button counter-fries hide" id="counter-fries">0</div>
                         <button class="menu-button button-fries" data-id="fries">Add</button>
                         <button class="plus-button plus-fries" data-id="fries">+</button>
                         <button class="minus-button minus-fries" data-id="fries">-</button>
@@ -83,6 +97,7 @@
                             <img src="img/popcorn.png" alt="popcorn" class="popcorn">    
                         </div>
                         <div class="menu-title">Popcorn•13$</div>
+                        <div class="counter-button counter-popcorn hide" id="counter-popcorn">0</div>
                         <button class="menu-button button-popcorn" data-id="popcorn">Add</button>
                         <button class="plus-button plus-popcorn" data-id="popcorn">+</button>
                         <button class="minus-button minus-popcorn" data-id="popcorn">-</button>
@@ -92,6 +107,7 @@
                             <img src="img/sushi.png" alt="sushi" class="sushi">    
                         </div>
                         <div class="menu-title">Sushi•18$</div>
+                        <div class="counter-button counter-sushi hide" id="counter-sushi">0</div>
                         <button class="menu-button button-sushi" data-id="sushi">Add</button>
                         <button class="plus-button plus-sushi" data-id="sushi">+</button>
                         <button class="minus-button minus-sushi" data-id="sushi">-</button>
@@ -101,18 +117,14 @@
                             <img src="img/ice-cream.png" alt="ice-cream" class="icecream">    
                         </div>
                         <div class="menu-title">Ice-Cream•5$</div>
+                        <div class="counter-button counter-icecream hide" id="counter-icecream">0</div>
                         <button class="menu-button button-icecream" data-id="icecream">Add</button>
                         <button class="plus-button plus-icecream" data-id="icecream">+</button>
                         <button class="minus-button minus-icecream" data-id="icecream">-</button>
                     </div>
-                </div> 
+                </div>
+                <button class="order-button hide" id="order-button">View Order</button> 
             </div>
         </div>  
     </body>
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
-    <script src="https://telegram.org/js/telegram-web-app.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <script src="js/counter.js"></script>
-    <script src="js/buttons.js"></script>
-    <script src="js/script.js"></script>
 </html>
