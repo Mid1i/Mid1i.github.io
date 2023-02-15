@@ -7,8 +7,8 @@ $(document).ready(function() {
         $('.pizza').toggleClass('active');
     });
 
-    $('.hot-dog').click(function(event) {
-        $('.hot-dog').toggleClass('active');
+    $('.hotdog').click(function(event) {
+        $('.hotdog').toggleClass('active');
     });
 
     $('.cookies').click(function(event) {
@@ -31,7 +31,7 @@ $(document).ready(function() {
         $('.sushi').toggleClass('active');
     });
 
-    $('.ice-cream').click(function(event) {
-        $('.ice-cream').toggleClass('active');
+    $('.icecream').click(function(event) {
+        $('.icecream').toggleClass('active');
     });
 });
