@@ -8,4 +8,8 @@ document.addEventListener('click', function(event) {
         $(`.plus-${id}`).toggleClass('animateToRight');
         $(`.minus-${id}`).toggleClass('animateToLeft');
     }
+
+    if (arg.classList.contains(`${arg.id}`)) {
+        $(`.${arg.id}`).toggleClass('active');     
+    }
 });
