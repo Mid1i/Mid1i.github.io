@@ -15,11 +15,11 @@ document.addEventListener('click', function(event) {
     let arg = event.target;
 
     if (arg.classList.contains('plus-button')) {
-        plusFuncion(arg.dataset.id);
+        plusFunction(arg.dataset.id);
     }
 
     if (arg.classList.contains('minus-button')) {
-        minusFuncion(arg.dataset.id);
+        minusFunction(arg.dataset.id);
     }
 });
 
@@ -40,10 +40,4 @@ function minusFunction(id) {
     }
 
     renderCart();
-}
-
-
-
-function renderCart() {
-    console.log(cart);
 }
