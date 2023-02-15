@@ -9,7 +9,7 @@ document.addEventListener('click', function(event) {
         $(`.minus-${id}`).toggleClass('animateToLeft');
     }
 
-    if (arg.classList.contains(`${arg.id}`)) {
+    if ((arg.classList.contains(`${arg.id}`)) && (arg.id != 'order-button')) {
         $(`.${arg.id}`).toggleClass('active');     
     }
 });
