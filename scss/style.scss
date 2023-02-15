@@ -3,6 +3,27 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap');
 
+%plus-minus {
+    position: absolute; 
+    opacity: 0;
+    top: 76%;
+    line-height: 40px;
+    text-align: center;
+    font-size: 30px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    -webkit-transition: all 1s ease 0s;
+    transition: all 1s ease 0s;
+
+    @media (max-width: 767px) {
+        width: 30px;
+        height: 30px;
+        font-size: 25px;
+        line-height: 30px;
+    }
+}
+
 .wrapper {
     background-color: white;
     font-family: "Oswald";
@@ -22,7 +43,8 @@
 }
 
 .menu-item {
-    display: flex;   
+    display: flex;
+    position: relative;   
     flex: 0 0 200px;
     margin: 50px auto;
     text-align: center;  
@@ -40,12 +62,12 @@
     width: 60px;
     height: 60px;
     flex: 0 0 40px;
+
     & img {
         max-width: 100%;
+        -webkit-transition: all 0.6s ease 0s;
         transition: all 0.6s ease 0s;
-    }
-
-    
+    } 
 }
 
 .active {
@@ -63,11 +85,51 @@
 
 .menu-button {
     width: 50%;
+    z-index: 1;
     font-size: 30px;
     border-radius: 10px;
+    -webkit-transition: all 1s ease 0s;
+    transition: all 1s ease 0s;;
     background-color: rgb(252, 180, 45);
 
     @media (max-width: 767px) {
        font-size: 20px;   
+    }
+}
+
+.plus-button {
+    @extend %plus-minus;
+    background-color: rgb(252, 180, 45);
+}
+
+.minus-button {
+    @extend %plus-minus;
+    background-color: rgb(226, 34, 34);
+}
+
+.hide {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.animateToRight {
+    opacity: 5;
+    -webkit-transform: translate(30px);
+    transform: translate(30px);
+
+    @media (max-width: 767px) {
+        -webkit-transform: translate(20px);
+        transform: translate(20px);
+    }
+}
+
+.animateToLeft {
+    opacity: 5;
+    -webkit-transform: translate(-30px);
+    transform: translate(-30px);
+
+    @media (max-width: 767px) {
+        -webkit-transform: translate(-20px);
+        transform: translate(-20px);
     }
 }
