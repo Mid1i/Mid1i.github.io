@@ -1,7 +1,43 @@
+@mixin logo-image($w, $h) {
+    height: $h;
+    width: $w;
+    margin: 0px 10px;
+    & img {max-width: 100%;} 
+    
+    @media (max-width: 767px) {
+        height: $h - 10px;
+        width: $w - 10px;
+        margin: 0px 5px;
+    }    
+}
+
 .header {
+    padding: 5px;
     display: flex;
-    padding: 10px 0px;
-    justify-content: center;
+    align-items: center;
+    justify-content: space-around; 
+    border-bottom: 1px solid white;
+}
+
+.header-name {
+    display: flex;
+    margin: 10px 0px 10px 0px;
+}
+
+.switch {
+    display: flex;
+}
+
+.switch-image {
+    @include logo-image(40px, 40px);
+}
+
+.header-logos {
+    display: flex;
+}
+
+.telegram-logo, .github-logo {
+    @include logo-image(50px, 50px);
 }
 
 .header-title {
@@ -13,13 +49,64 @@
         margin: 0px 5px 0px 0px;
         font-size: 50px;
     }
+
+    @media (max-width: 500px) {
+        display: none;
+    }
 }
 
 .header-image {
-    flex: 0 0 70px;
+    width: 70px;
+    height: 70px;
     & img {max-width: 100%;}
 
     @media (max-width: 767px) {
-        flex: 0 0 50px;
+        width: 50px;
+        height: 50px;
+    }
+
+    @media (max-width: 500px) {
+        display: none;
+    }
+}
+
+input[type=checkbox] {
+    width: 80px;
+    height: 40px;
+    appearance: none;
+    position: relative;
+    border-radius: 20px;
+    background-color: #c6c6c6;
+    transition: all 0.5 ease 0s;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+
+    &:checked {
+        background-color: #40e551;
+        &::before {left: 42.5px;}
+    }
+
+    &::before {
+        content: "";
+        top: 2.5px;
+        left: 2.5px;
+        width: 35px;
+        height: 35px;
+        position: absolute;
+        border-radius: 20px;
+        background-color: white;
+        transition: all 0.5s ease 0s;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
+
+    @media (max-width: 767px) {
+        width: 60px;
+        height: 30px;
+
+        &::before {
+            width: 25px;
+            height: 25px;
+        }
+
+        &:checked::before {left: 32.5px;}
     }
 }
