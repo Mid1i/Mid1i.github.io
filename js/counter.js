@@ -18,7 +18,7 @@ document.addEventListener('click', function(event) {
         changeCounter(arg.dataset.id);
         document.getElementById(`counter-${arg.dataset.id}`).classList.remove('hide');
         document.getElementById('order-button').classList.remove('hide');
-    }
+    } 
 
     if (arg.classList.contains('minus-button')) {
         minusFunction(arg.dataset.id);
