@@ -1,7 +1,54 @@
 .header {
+  padding: 5px;
   display: flex;
-  padding: 10px 0px;
-  justify-content: center;
+  align-items: center;
+  justify-content: space-around;
+  border-bottom: 1px solid white;
+}
+
+.header-name {
+  display: flex;
+  margin: 10px 0px 10px 0px;
+}
+
+.switch {
+  display: flex;
+}
+
+.switch-image {
+  height: 40px;
+  width: 40px;
+  margin: 0px 10px;
+}
+.switch-image img {
+  max-width: 100%;
+}
+@media (max-width: 767px) {
+  .switch-image {
+    height: 30px;
+    width: 30px;
+    margin: 0px 5px;
+  }
+}
+
+.header-logos {
+  display: flex;
+}
+
+.telegram-logo, .github-logo {
+  height: 50px;
+  width: 50px;
+  margin: 0px 10px;
+}
+.telegram-logo img, .github-logo img {
+  max-width: 100%;
+}
+@media (max-width: 767px) {
+  .telegram-logo, .github-logo {
+    height: 40px;
+    width: 40px;
+    margin: 0px 5px;
+  }
 }
 
 .header-title {
@@ -15,15 +62,69 @@
     font-size: 50px;
   }
 }
+@media (max-width: 500px) {
+  .header-title {
+    display: none;
+  }
+}
 
 .header-image {
-  flex: 0 0 70px;
+  width: 70px;
+  height: 70px;
 }
 .header-image img {
   max-width: 100%;
 }
 @media (max-width: 767px) {
   .header-image {
-    flex: 0 0 50px;
+    width: 50px;
+    height: 50px;
+  }
+}
+@media (max-width: 500px) {
+  .header-image {
+    display: none;
+  }
+}
+
+input[type=checkbox] {
+  width: 80px;
+  height: 40px;
+  appearance: none;
+  position: relative;
+  border-radius: 20px;
+  background-color: #c6c6c6;
+  transition: all 0.5 ease 0s;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+}
+input[type=checkbox]:checked {
+  background-color: #40e551;
+}
+input[type=checkbox]:checked::before {
+  left: 42.5px;
+}
+input[type=checkbox]::before {
+  content: "";
+  top: 2.5px;
+  left: 2.5px;
+  width: 35px;
+  height: 35px;
+  position: absolute;
+  border-radius: 20px;
+  background-color: white;
+  transition: all 0.5s ease 0s;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+@media (max-width: 767px) {
+  input[type=checkbox] {
+    width: 60px;
+    height: 30px;
+  }
+  input[type=checkbox]::before {
+    width: 25px;
+    height: 25px;
+  }
+  input[type=checkbox]:checked::before {
+    left: 32.5px;
   }
 }
