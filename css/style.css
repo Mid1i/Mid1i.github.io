@@ -203,14 +203,15 @@ input[type=checkbox]::before {
 }
 
 .minus-button, .plus-button {
-  position: absolute;
-  opacity: 0;
   top: 76%;
-  line-height: 40px;
-  text-align: center;
-  font-size: 30px;
+  opacity: 0;
+  opacity: 0;
   width: 40px;
   height: 40px;
+  font-size: 40px;
+  line-height: 40px;
+  position: absolute;
+  text-align: center;
   border-radius: 50%;
   transition: all 0.5s ease 0s;
 }
